@@ -207,9 +207,9 @@ public class FoAblak extends JFrame implements ActionListener{
     if (e.getSource()==btDolgozoMentese) {
       btDolgozoMentese.setEnabled(false);
       btCancel.setEnabled(false);
-      System.out.println(ujDolgozo.getKeresztNev()+ujDolgozo.getVezetekNev()+
-              ujDolgozo.getEmail()+ujDolgozo.getTelefonSzam()+ujDolgozo.getFizetes()+" "+
-              ujDolgozo.getDepId()+" " +ujDolgozo.getFelveteliDatum()+ujDolgozo.getMunkakor());
+//      System.out.println(ujDolgozo.getKeresztNev()+ujDolgozo.getVezetekNev()+
+//              ujDolgozo.getEmail()+ujDolgozo.getTelefonSzam()+ujDolgozo.getFizetes()+" "+
+//              ujDolgozo.getDepId()+" " +ujDolgozo.getFelveteliDatum()+ujDolgozo.getMunkakor());
       if (ujDolgozoMentese(ujDolgozo)) {
         tDolgozoTable.setModel(dolgozoListaBetoltes(((Reszleg) cbReszlegLista.getSelectedItem()).getReszlegId()));
         ((MyTableModell) (tDolgozoTable.getModel())).setUjDolgozoFelvetel(false);
@@ -237,7 +237,7 @@ public class FoAblak extends JFrame implements ActionListener{
   }
 
   private boolean ujDolgozoMentese(Dolgozo ujDolgozo) {
-    System.out.println("Még nem csinál semit");
+    //System.out.println("Még nem csinál semit");
     boolean ok = false;
     try {
       boolean mehetAMentes = Ellenorzes();
